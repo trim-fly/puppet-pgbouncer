@@ -5,9 +5,7 @@
 
 ;; Set hieradata hash value for "pgbouncer::params::config_params" to override
 ;; below values
-<% @load_config_params.each_pair do |name, param| -%>
-<%= "#{name} = #{param}" %>
+<% @load_config_params.keys.sort.each do |key| -%>
+<%= "#{key} = #{load_config_params[key]}" %>
 <% end -%>
-
-
 
