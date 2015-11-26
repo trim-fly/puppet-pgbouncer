@@ -103,8 +103,6 @@ class pgbouncer (
       package{ $pgbouncer_package_name:
         ensure  => installed,
         require => [
-          Class[
-            'postgresql::repo::yum_postgresql_org'],
             Anchor['pgbouncer::begin']
           ],
       }
